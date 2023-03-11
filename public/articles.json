@@ -1,0 +1,44 @@
+[
+  {
+    "species": "Polar Bear",
+    "title": "Say hello to your new",
+    "highlight": " friend",
+    "image": "../../img/polar_bear.png"
+  },
+  {
+    "species": "Cheetah",
+    "title": "No petting before",
+    "highlight": " eating",
+    "image": "../../img/cheetah.png"
+  },
+  {
+    "species": "Panda",
+    "title": "No petting before",
+    "highlight": " eating",
+    "image": "../../img/panda.png"
+  },
+  {
+    "species": "Fox",
+    "title": "No petting before",
+    "highlight": " eating",
+    "image": "../../img/fox.png"
+  },
+  {
+    "species": "Squirrel",
+    "title": "No petting before",
+    "highlight": " eating",
+    "image": "../../img/squirrel.png"
+  },
+  {
+    "species": "Butterfly",
+    "title": "No petting before",
+    "highlight": " eating",
+    "image": "../../img/butterfly.png"
+  },
+  {
+    "species": "Elephant",
+    "title": "No petting before",
+    "highlight": " eating",
+    "image": "../../img/Elephant.png"
+  }
+]
