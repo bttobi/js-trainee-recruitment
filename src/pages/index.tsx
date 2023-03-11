@@ -9,16 +9,18 @@ export default function Home() {
     title: string; 
     highlight: string; 
     image: string;
+    alt: string;
+    id: number;
   };
 
   const articles : Article[] = data;
 
   return (
     <div className={styles.wrapper}>
-      <Menu species={articles.map((article:Article) => article.species)} />
+      <Menu species={articles.map((article:Article) =>  article.species)} />
       <div className={styles.wrapper_article}>
       {
-        articles.map((article:Article) => <Article species={article.species.toUpperCase()} title={article.title} highlight={article.highlight} image={article.image} />)
+        articles.map((article:Article) => <Article key={article.id} species={article.species.toUpperCase()} title={article.title} highlight={article.highlight} image={article.image} alt={article.alt} id={article.id}/>)
       }
       </div>
     </div>
