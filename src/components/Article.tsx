@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from "../styles/index.module.css";
+import {forwardRef} from 'react';
 
 type ArticleProps = {
   species: string;
@@ -7,12 +8,11 @@ type ArticleProps = {
   highlight: string;
   image: string;
   alt: string;
-  id: number;
 };
 
-const Article : React.FunctionComponent<ArticleProps> = ({species, title, highlight, image, alt, id}) => {
+const Article : React.FunctionComponent<ArticleProps> = ({species, title, highlight, image, alt}, ref) => {
   return (
-    <div className={styles.article}>
+    <div ref={ref} className={styles.article}>
       <span className={styles.species}>{species}</span>
       <div className={styles.title}>
         {
@@ -32,4 +32,4 @@ const Article : React.FunctionComponent<ArticleProps> = ({species, title, highli
   )
 }
 
-export default Article
+export default forwardRef(Article)
