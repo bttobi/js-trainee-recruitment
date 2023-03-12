@@ -2,56 +2,56 @@
   {
     "id": 1,
     "species": "Polar Bear",
-    "title": "Say hello to your new",
-    "highlight": " friend",
+    "title": "Say hello to your new friend",
+    "highlight": "friend",
     "image": "../../img/polar_bear.png",
     "alt": "Polar Bear Picture"
   },
   {
     "id": 2,
     "species": "Cheetah",
-    "title": "No petting before",
-    "highlight": " eating",
+    "title": "No petting before eating",
+    "highlight": "eating",
     "image": "../../img/cheetah.png",
     "alt": "Cheetah Picture"
   },
   {
     "id": 3,
     "species": "Panda",
-    "title": "No petting before",
-    "highlight": " eating",
+    "title": "Eating always with pleasure",
+    "highlight": "pleasure",
     "image": "../../img/panda.png",
     "alt": "Panda Picture"
   },
   {
     "id": 4,
     "species": "Fox",
-    "title": "No petting before",
-    "highlight": " eating",
+    "title": "Sometimes quite suspicious",
+    "highlight": "suspicious",
     "image": "../../img/fox.png",
     "alt": "Fox Picture"
   },
   {
     "id": 5,
     "species": "Squirrel",
-    "title": "No petting before",
-    "highlight": " eating",
+    "title": "Staying curious",
+    "highlight": "curious",
     "image": "../../img/squirrel.png",
     "alt": "Squirrel Picture"
   },
   {
     "id": 6,
     "species": "Butterfly",
-    "title": "No petting before",
-    "highlight": " eating",
+    "title": "Majestic every time of a day",
+    "highlight": "Majestic",
     "image": "../../img/butterfly.png",
     "alt": "Butterfly Picture"
   },
   {
     "id": 7,
     "species": "Elephant",
-    "title": "No petting before",
-    "highlight": " eating",
+    "title": "It makes a huge difference",
+    "highlight": "huge",
     "image": "../../img/Elephant.png",
     "alt": "Elephant Picture"
   }

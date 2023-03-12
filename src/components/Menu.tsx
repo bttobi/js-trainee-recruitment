@@ -16,7 +16,7 @@ const Menu : React.FunctionComponent<MenuProps> = ({species}) => {
       <ul className={styles.menu_list}>
         {
           species.map((specie:string)=>
-          <li key={specie} className={styles.menu_item}><a href="#" onClick={setActive}>{specie}</a></li>
+          <li key={specie} className={styles.menu_item}><a className={styles.menu_item} href="#" onClick={setActive}>{specie}</a></li>
           ) 
         }
       </ul>
