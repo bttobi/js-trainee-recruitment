@@ -19,12 +19,12 @@ export default function Home() {
 
   const ids : any = data.map((entry) => entry.id);
 
-  const refs = ids.reduce((id:any, index:number) => {
+  const refs = ids.reduce((id:any, index:number) => { //adding refs
     id[index] = React.createRef();
     return id;
   }, {});
 
-  const handleClick = (id:number) =>{
+  const handleClick = (id:number) =>{ //handling clicks
     if(id === 1){
       window.scrollTo({
         top: 0,
@@ -42,7 +42,7 @@ export default function Home() {
     articleElems.forEach((el, index)=>{
       const bounding = el.getBoundingClientRect();
       buttons[index].classList.remove(styles.menu_button_active);
-      if(bounding.top <= (window.innerHeight/2 || document.documentElement.clientHeight/2) && 
+      if(bounding.top <= (window.innerHeight/2 || document.documentElement.clientHeight/2) && //checking if element is in view
         bounding.bottom >= (window.innerHeight/2 || document.documentElement.clientHeight/2)){
           buttons[index].classList.add(styles.menu_button_active);
       }
@@ -51,11 +51,11 @@ export default function Home() {
   }
 
   useEffect(()=>{
-    document.addEventListener("scroll", handleActive);
+    document.addEventListener("scroll", handleActive); //adding scrolling event
   },)
 
   useEffect(()=>{
-    const button = [...document.getElementsByClassName(styles.menu_button)][0];
+    const button = [...document.getElementsByClassName(styles.menu_button)][0]; //adding active to the first element on page Render
     button.classList.add(styles.menu_button_active);
   },[])
 

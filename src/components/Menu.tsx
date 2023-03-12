@@ -17,10 +17,7 @@ const Menu : React.FunctionComponent<MenuProps> = ({clickFun, species, id}) => {
           <li key={index} className={styles.menu_item}>
             <button className={styles.menu_button} onClick={()=>{clickFun(specie[1]); 
             const elements = [...document.getElementsByClassName(styles.menu_button)];
-            elements.forEach((el) => {
-              el.classList.remove(styles.menu_button_active);
-            });
-            elements[specie[1]-1].classList.add(styles.menu_button_active);
+            elements[specie[1]-1].classList.add(styles.menu_button_active); //adding active class on clicked element
           }}>{specie[0]}
             </button>
           </li>);

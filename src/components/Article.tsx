@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from "../styles/index.module.css";
-import {forwardRef} from 'react';
+import { forwardRef } from 'react';
 
 type ArticleProps = {
   species: string;
@@ -16,13 +16,13 @@ const Article : React.FunctionComponent<ArticleProps> = ({species, title, highli
       <span className={styles.species}>{species}</span>
       <div className={styles.title}>
         {
-          title.split(' ').map((word:string)=>
+          title.split(' ').map((word:string, index:number)=> //highlighting word
           {
             if(highlight === word) {
-              return <span className={styles.highlight}>{word + " "}</span> 
+              return <span key={index} className={styles.highlight}>{word + " "}</span> 
             }
             else {
-              return <span className={styles.title}>{word + " "}</span>
+              return <span key={index} className={styles.title}>{word + " "}</span>
             }
           })
         }
@@ -32,4 +32,4 @@ const Article : React.FunctionComponent<ArticleProps> = ({species, title, highli
   )
 }
 
-export default forwardRef(Article)
+export default forwardRef(Article);
