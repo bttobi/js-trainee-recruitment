@@ -3,7 +3,7 @@ import Menu from "../components/Menu";
 import styles from "../styles/index.module.css";
 import data from "../../public/articles.json";
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function Home() {
   interface Article{
@@ -35,6 +35,29 @@ export default function Home() {
       refs[id-1].current?.scrollIntoView({behavior: "smooth"});
     }
   }
+
+  const handleActive = () => {
+    const articleElems = [...document.getElementsByClassName(styles.article)];
+    const buttons = [...document.getElementsByClassName(styles.menu_button)];
+    articleElems.forEach((el, index)=>{
+      const bounding = el.getBoundingClientRect();
+      buttons[index].classList.remove(styles.menu_button_active);
+      if(bounding.top <= (window.innerHeight/2 || document.documentElement.clientHeight/2) && 
+        bounding.bottom >= (window.innerHeight/2 || document.documentElement.clientHeight/2)){
+          buttons[index].classList.add(styles.menu_button_active);
+      }
+
+    });
+  }
+
+  useEffect(()=>{
+    document.addEventListener("scroll", handleActive);
+  },)
+
+  useEffect(()=>{
+    const button = [...document.getElementsByClassName(styles.menu_button)][0];
+    button.classList.add(styles.menu_button_active);
+  },[])
 
   return (
     <div className={styles.wrapper}>

@@ -106,3 +106,28 @@
     margin-bottom: 7%;
     text-decoration: none;
 }
+
+.menu_button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #71717A;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 132%;
+}
+
+
+.menu_button_active {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #F2994A;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 132%;
+}

@@ -13,7 +13,17 @@ const Menu : React.FunctionComponent<MenuProps> = ({clickFun, species, id}) => {
       <ul className={styles.menu_list}>
         {
           species.map((specie, index)=>{
-          return (<li key={specie[index]} className={styles.menu_item}><button className={styles.menu_item} onClick={()=>{clickFun(specie[1])}}>{specie[0]}</button></li>);
+          return (
+          <li key={index} className={styles.menu_item}>
+            <button className={styles.menu_button} onClick={()=>{clickFun(specie[1]); 
+            const elements = [...document.getElementsByClassName(styles.menu_button)];
+            elements.forEach((el) => {
+              el.classList.remove(styles.menu_button_active);
+            });
+            elements[specie[1]-1].classList.add(styles.menu_button_active);
+          }}>{specie[0]}
+            </button>
+          </li>);
         }
           ) 
         }
