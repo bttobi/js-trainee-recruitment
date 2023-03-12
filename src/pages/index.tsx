@@ -60,11 +60,11 @@ export default function Home() {
   },[])
 
   return (
-    <div className={styles.wrapper}> 
+    <div className={styles.wrapper}>
       <Menu clickFun={handleClick} species={articles.map((article:Article) => [article.species, article.id])} />
       <div className={styles.wrapper_article}>
       {
-        articles.map((article:Article, index:number) =>{ //mapping articles
+        articles.map((article:Article, index:number) =>{
           return (<Article ref={refs[index]} key={article.id} species={article.species.toUpperCase()} title={article.title} highlight={article.highlight} image={article.image} alt={article.alt} id={article.id}/>)
         })
       }
